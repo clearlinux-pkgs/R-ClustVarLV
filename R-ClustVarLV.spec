@@ -4,7 +4,7 @@
 #
 Name     : R-ClustVarLV
 Version  : 1.5.1
-Release  : 7
+Release  : 8
 URL      : https://cran.r-project.org/src/contrib/ClustVarLV_1.5.1.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/ClustVarLV_1.5.1.tar.gz
 Summary  : Clustering of Variables Around Latent Variables
