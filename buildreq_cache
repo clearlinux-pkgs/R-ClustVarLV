@@ -1,0 +1,6 @@
+1.6.0
+R-Rcpp
+R-RcppEigen
+R-doParallel
+R-foreach
+R-iterators
