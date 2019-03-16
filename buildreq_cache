@@ -4,3 +4,4 @@ R-RcppEigen
 R-doParallel
 R-foreach
 R-iterators
+R-markdown

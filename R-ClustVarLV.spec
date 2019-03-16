@@ -4,23 +4,20 @@
 #
 Name     : R-ClustVarLV
 Version  : 1.6.0
-Release  : 14
+Release  : 15
 URL      : https://cran.r-project.org/src/contrib/ClustVarLV_1.6.0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/ClustVarLV_1.6.0.tar.gz
 Summary  : Clustering of Variables Around Latent Variables
 Group    : Development/Tools
 License  : GPL-2.0
 Requires: R-ClustVarLV-lib = %{version}-%{release}
-Requires: R-Rcpp
-Requires: R-RcppEigen
-Requires: R-doParallel
-Requires: R-foreach
-Requires: R-iterators
+Requires: R-markdown
 BuildRequires : R-Rcpp
 BuildRequires : R-RcppEigen
 BuildRequires : R-doParallel
 BuildRequires : R-foreach
 BuildRequires : R-iterators
+BuildRequires : R-markdown
 BuildRequires : buildreq-R
 
 %description
@@ -42,10 +39,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1540474500
+export SOURCE_DATE_EPOCH=1552728532
 
 %install
-export SOURCE_DATE_EPOCH=1540474500
+export SOURCE_DATE_EPOCH=1552728532
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -81,8 +78,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc -l %{buildroot}/usr/lib64/R/library ClustVarLV|| : 
-cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
+R CMD check --no-manual --no-examples --no-codoc  ClustVarLV || :
 
 
 %files
@@ -115,7 +111,6 @@ cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 /usr/lib64/R/library/ClustVarLV/help/paths.rds
 /usr/lib64/R/library/ClustVarLV/html/00Index.html
 /usr/lib64/R/library/ClustVarLV/html/R.css
-/usr/lib64/R/library/ClustVarLV/libs/symbols.rds
 
 %files lib
 %defattr(-,root,root,-)
