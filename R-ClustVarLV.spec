@@ -4,7 +4,7 @@
 #
 Name     : R-ClustVarLV
 Version  : 2.0.1
-Release  : 28
+Release  : 29
 URL      : https://cran.r-project.org/src/contrib/ClustVarLV_2.0.1.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/ClustVarLV_2.0.1.tar.gz
 Summary  : Clustering of Variables Around Latent Variables
@@ -38,21 +38,22 @@ lib components for the R-ClustVarLV package.
 
 %prep
 %setup -q -c -n ClustVarLV
+cd %{_builddir}/ClustVarLV
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1578693010
+export SOURCE_DATE_EPOCH=1589582758
 
 %install
-export SOURCE_DATE_EPOCH=1578693010
+export SOURCE_DATE_EPOCH=1589582758
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
+export FCFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
+export FFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
 export CXXFLAGS="$CXXFLAGS -O3 -flto -fno-semantic-interposition "
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
