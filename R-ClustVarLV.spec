@@ -4,7 +4,7 @@
 #
 Name     : R-ClustVarLV
 Version  : 2.0.1
-Release  : 42
+Release  : 43
 URL      : https://cran.r-project.org/src/contrib/ClustVarLV_2.0.1.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/ClustVarLV_2.0.1.tar.gz
 Summary  : Clustering of Variables Around Latent Variables
@@ -45,10 +45,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1640908760
+export SOURCE_DATE_EPOCH=1640989954
 
 %install
-export SOURCE_DATE_EPOCH=1640908760
+export SOURCE_DATE_EPOCH=1640989954
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
